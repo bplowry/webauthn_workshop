@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const enforce = require('express-sslify')
 const app = express()
 
+const apiRouter = require('./routes/api')
+
 if (process.env.ENFORCE_SSL_HEROKU === 'true') {
     app.use(enforce.HTTPS({ trustProtoHeader: true }))
 } else if (process.env.ENFORCE_SSL_AZURE === 'true') {
@@ -14,16 +16,11 @@ app.use(express.static(path.join(__dirname, '..' , 'client', 'build')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/api/health', async (_req, res) => {
-    res.json({
-        status: 'ok'
-    })
-})
+app.use('/api', apiRouter)
 
 app.get('/*', function (req, res) {
-    const pn = path.join(__dirname, '..' , 'client', 'build', 'index.html')
-    console.log({pn})
     res.sendFile(path.join(__dirname, '..' , 'client', 'build', 'index.html'));
 });
+
 
 app.listen(process.env.PORT || 3001, () => console.log('App launched.'))
