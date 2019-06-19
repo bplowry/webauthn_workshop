@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
 export interface User {
-    id?: string
-    username?: string
-    displayName?: string
+    id?: string;
+    displayName?: string;
 }
 
 export type UserContextType = {
-    user: User | false | null
-    setUser(user: UserContextType['user']): void
-}
+    user: User | false | null;
+    setUser(user: UserContextType["user"]): void;
+};
 export const UserContext = React.createContext<UserContextType>({
     user: false,
     setUser: () => {}
-})
+});

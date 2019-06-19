@@ -1,6 +1,6 @@
 .navigation {
     background: #f4f5f6;
-    border-bottom: .1rem solid #d1d1d1;
+    border-bottom: 0.1rem solid #d1d1d1;
     display: block;
     left: 0;
     max-width: 100%;
@@ -35,4 +35,8 @@
 
 .placeholder span[role="image"] {
     font-size: 20rem;
+}
+
+.error {
+    color: red;
 }
