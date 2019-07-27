@@ -15,12 +15,12 @@ const App: React.FC = () => {
     const [user, setUser] = useState<UserContextType['user']>(null)
 
     // temporary health check to make sure we can contact the API
-    useEffect(() => {
-        fetch('/api/health')
-            .then(resp => resp.json())
-            .then(console.log)
-            .catch(console.error)
-    }, [])
+    // useEffect(() => {
+    //     fetch('/api/health')
+    //         .then(resp => resp.json())
+    //         .then(console.log)
+    //         .catch(console.error)
+    // }, [])
 
     useEffect(() => {
         let ignore = false

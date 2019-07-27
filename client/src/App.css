@@ -36,3 +36,15 @@
 .placeholder span[role="image"] {
     font-size: 20rem;
 }
+
+.login-option {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+}
+
+.login-option.noflex {
+    display: block;
+}

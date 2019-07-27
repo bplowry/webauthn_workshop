@@ -1,9 +1,9 @@
 import React from 'react'
 
 export interface User {
-    id?: string
-    username?: string
-    displayName?: string
+    id: string
+    username: string
+    displayName: string
 }
 
 export type UserContextType = {

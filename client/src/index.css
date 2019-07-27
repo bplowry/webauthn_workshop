@@ -4,7 +4,7 @@ html, body, .container, .row {
 
 .formcontainer {
     background: #f0f0f0;
-    padding: 15px;
+    padding: 2.5rem;
 }
 
 .formcontainer form, .formcontainer fieldset{

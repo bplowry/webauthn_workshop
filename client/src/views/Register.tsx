@@ -18,7 +18,7 @@ export function Register() {
             <div className="row row-center">
                 <div className="column">
                     <div className="formcontainer">
-                        <h3>Register page</h3>
+                        <h3>Register</h3>
                         <form id="register" onSubmit={onSubmit}>
                             <fieldset>
                                 <label htmlFor="username">
@@ -33,11 +33,11 @@ export function Register() {
                                     Password
                                     <input type="password" name="password" value={password} autoComplete="new-password" required onChange={(ev) => setPassword(ev.target.value)} />
                                 </label>
-                                <input className="button-primary" type="submit" value="Register" />
+                                <input className="button button-primary" type="submit" value="Register" />
                             </fieldset>
                         </form>
 
-                        <Link to='/login'>Already registered? Login page</Link>
+                        <Link to='/login'>Already registered? Log in</Link>
                     </div>
                 </div>
             </div>
